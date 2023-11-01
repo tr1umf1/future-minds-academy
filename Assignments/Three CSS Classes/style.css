@@ -1,0 +1,21 @@
+.light {
+    background-color: lightgrey;
+    color: black;
+}
+.dark {
+    background-color: black;
+    color: white;
+} 
+.new {
+    border: 2px solid yellow;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.lightnew {
+    background-color: green;
+    color: blue;
+}
+.darknew {
+    background-color: blue;
+    color: green;
+}

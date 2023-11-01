@@ -1,0 +1,21 @@
+h1 {
+    background-color: red;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+}
+h2 {
+    background-color: purple;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;
+}
+p {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-family: monospace;
+}
