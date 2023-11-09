@@ -4,7 +4,11 @@ nav {
     margin-bottom: 30px;
     height: 20px;
 }
-
+/* Top Section*/
+.toptitle {
+    font-size: 40px;
+    color: blueviolet;
+}
 nav li {
     float: left;
     list-style-type: none;
