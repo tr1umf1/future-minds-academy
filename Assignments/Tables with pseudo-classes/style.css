@@ -1,0 +1,19 @@
+table {
+    width: 30%;
+    font-size: 25px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #A6CF98;
+}
+tr:nth-child(odd) {
+    background-color: #557C55;
+}
+tr:hover:nth-child(even) {
+    background-color: #ffd700; 
+}
+tr:hover:nth-child(odd) {
+    background-color: #FF9209; 
+}

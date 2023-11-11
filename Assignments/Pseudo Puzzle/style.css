@@ -1,0 +1,12 @@
+h1:hover {
+    background-color: rgb(66, 245, 69);
+    color: rgb(87, 66, 245);
+}
+p:hover {
+    background-color: rgb(245, 120, 66);
+    color: rgb(245, 212, 6);
+}
+p:hover::first-letter  {
+    font-size: 40px;
+    text-decoration: line-through;
+}
