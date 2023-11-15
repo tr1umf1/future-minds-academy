@@ -1,0 +1,36 @@
+h1 {
+    color: orange;
+    font-size: 35px;
+    text-decoration: underline;
+    margin: 20px;
+}
+h1:hover {
+    color: darkcyan;
+    font-size: 50px;
+}
+.audi {
+    width: 320px;
+    float: left;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+p {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(235, 64, 52);
+    width: 800px;
+    padding: 10px;
+    margin: 10px;
+}
+
+img:hover {
+    width: 450px;
+    border-width: 4px;
+    border-style: dashed;
+    border-color: rgb(219, 247, 7);
+    padding: 20px;
+    cursor: pointer;
+}
