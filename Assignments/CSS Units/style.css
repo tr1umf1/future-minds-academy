@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+section{
+    height: 25vh;
+    color: white;
+}
+section:nth-child(odd) {
+    background-color: rgba(111, 109, 109, 0.9);
+}
+section:nth-child(even) {
+    background-color: rgba(132, 47, 47, 1);
+}
+h1 {
+    text-decoration: underline;
+    font-size: 2em;
+}
+p {
+    font-size:  1em;
+}
