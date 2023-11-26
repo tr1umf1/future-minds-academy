@@ -52,7 +52,7 @@ hr {
   border: 2px solid white;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-  background-color: rgba(61, 60, 60, 0.7);
+  background-color: rgba(21, 60, 60, 0.7);
   width: 800px;
   height: 550px;
   margin: 40px;
@@ -83,7 +83,7 @@ hr {
     border: 1px solid white;
     border-radius: 15px;
     box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(61, 60, 60, 0.7);
+    background-color: rgba(21, 60, 60, 0.7);
     max-width: 800px;
     margin: 40px;
     padding: 10px;
@@ -130,7 +130,7 @@ hr {
     border: 1px solid white;
     border-radius: 15px;
     box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(61, 60, 60, 0.7);
+    background-color: rgba(21, 60, 60, 0.7);
     max-width: 800px;
     margin: 40px;
     padding: 10px;
@@ -222,7 +222,7 @@ hr {
     padding: 10px;
     display: inline-block;
     text-align: center;
-    animation: footerAnimation 2s infinite alternate, colorChange 4s infinite; 
+    animation: footerAnimation 2s infinite alternate; 
     transition: background-color 0.3s;
 }
 
@@ -251,8 +251,211 @@ hr {
       box-shadow: 0 0 20px #59166b, 0 0 40px #59166b, 0 0 60px #f07502; 
       transform: scale(1.0); 
     }
-  }
+}
   /*Project page start here*/
 
 .projekti1 {
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+    background-color: rgba(21, 60, 60, 0.7);
+    font-size: 20px;
+    width: 900px;
+    margin: 40px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    animation: footerAnimation 2s infinite alternate, colorChange 4s infinite; 
+    transition: background-color 0.3s;
+}
+
+.projekti1:hover {
+    transform: scale(1.1);
+    background-color: rgba(14, 101, 213, 0.4);
+}
+.projekti1 button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    animation: moveButton 2s linear infinite, changeColor 4s linear infinite;
+  }
+
+.projekti1 button:hover {
+    transform: scale(1.1);
+    animation-play-state: paused;
+    background-color: rgba(232, 114, 12, 0.7) !important;
+}
+  
+/* Animation keyframes */
+@keyframes moveButton {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px); 
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+      background-color: #3498db; 
+    }
+    25% {
+      background-color: #e74c3c; 
+    }
+    50% {
+      background-color: #2ecc71; 
+    }
+    75% {
+      background-color: #f39c12; 
+    }
+    100% {
+      background-color: #3498db;
+    }
+}
+/*Contact me starts here*/
+
+.message {
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+    background-color: rgba(21, 60, 60, 0.7);
+    font-size: 20px;
+    width: 600px;
+    margin: 40px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s;
+    animation: messageAnimation 2s infinite alternate;
+}
+
+input {
+    background-color: #34e80c;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    animation: pulsate 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulsate {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Initial and final state */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* Pulsating state */
+    }
+  }
+
+textarea {
+    width: 60%;
+    margin: 10px;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #2ecc71;
+    border-radius: 6px;
+    background-color: #ecf0f1;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+    resize: none;
+    background-color: #34e80c;
+    animation: colorChanges 5s infinite, pulsate 1.5s ease-in-out infinite;
+  }
+/*
+@keyframes colorChanges {
+    0% {
+      background-color: #ecf0f1;
+    }
+    75% {
+      background-color: #2ecc71;
+    }
+    100% {
+      background-color: #ecf0f1;
+    }
+}*/
+
+textarea:hover {
+    animation-play-state: paused;
+}
+
+@keyframes messageAnimation {
+    0% {
+      border-color: white;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    }
+    100% {
+      border-color: #34e80c; 
+      box-shadow: 0 0 20px #34e80c, 0 0 40px #34e80c, 0 0 60px #f07502; 
+      transform: scale(1.0); 
+    }
+}
+
+.message button { 
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    animation: moveButton 2s linear infinite, changeColor2 4s linear infinite;
+}
+@keyframes changeColor2 {
+    0% {
+      background-color: #23638d; 
+    }
+    25% {
+      background-color: #5eaa0d; 
+    }
+    50% {
+      background-color: #f8d407; 
+    }
+    75% {
+      background-color: #bf12f3; 
+    }
+    100% {
+      background-color: #23638d;
+    }
+}
+
+.message button:hover {
+    animation-play-state: paused;
+    background-color: #991d0f !important;
+}
+
+/*Social Part*/
+
+.social {
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+    background-color: rgba(21, 60, 60, 0.7);
+    font-size: 20px;
+    width: 400px;
+    height: 250px;
+    margin: 40px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    animation: messageAnimation 2s infinite alternate;
+}
+.social a {
+    
 }
