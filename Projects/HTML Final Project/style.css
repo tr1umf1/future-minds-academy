@@ -352,10 +352,10 @@ input {
 
   @keyframes pulsate {
     0%, 100% {
-      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Initial and final state */
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
     }
     50% {
-      box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* Pulsating state */
+      box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); 
     }
   }
 
@@ -458,32 +458,30 @@ textarea:hover {
     animation: messageAnimation 2s infinite alternate;
 }
 
-/* Social section heading */
 .social h2 {
     font-size: 24px;
-    color: #3498db; /* Heading color */
+    color: #3498db; 
     margin-bottom: 20px;
   }
   
-  /* Social links container */
+
   .social a {
     position: relative;
     display: inline-block;
     margin: 0 20px;
     text-decoration: none;
-    color: #3498db; /* Link color */
+    color: #3498db; 
     overflow: hidden;
   }
   
-  /* Social images styling */
   .social img {
-    width: 100px; /* Adjust the size of the images */
+    width: 100px; 
     height: auto;
-    border-radius: 50%; /* Make the images circular */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   }
   
-  /* Animation */
+  
   .social a::before {
     content: "";
     position: absolute;
@@ -493,7 +491,7 @@ textarea:hover {
     left: 0;
     background-color: #3498db;
     transform-origin: right;
-    animation: underlineAnimation 2s infinite; /* Adjust the duration */
+    animation: underlineAnimation 2s infinite; 
   }
   
   @keyframes underlineAnimation {
