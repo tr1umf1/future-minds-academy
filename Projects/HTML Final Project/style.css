@@ -1,57 +1,56 @@
 * {
-    cursor: url(images/rocket.png), auto;
+  cursor: url(images/rocket.png), auto;
 }
 body {
-    background-image: url(images/template.jpg);
-    color: white;
-    text-align: center;
+  background-image: url(images/template.jpg);
+  color: white;
+  text-align: center;
 }
 .homeheader {
-    text-align: center;
+  text-align: center;
 }
 .homeheader h1:hover {
-    color: red;
+  color: red;
 }
 .homeheader nav {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 .homeheader ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 .homeheader li {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .homeheader li a {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    padding: 10px 25px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: rgba(13, 255, 0,0.4   );
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  padding: 10px 25px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(13, 255, 0, 0.4);
 }
 
 .homeheader li a:hover {
-    background-color: rgba(217, 160, 55, 0.9);
-    font-size: 20px;
+  background-color: rgba(217, 160, 55, 0.9);
+  font-size: 20px;
 }
 hr {
-    width: 50%;
-    border-top: 1px solid red;
+  width: 50%;
+  border-top: 1px solid red;
 }
 /* Description part  */
 .description {
   position: relative;
   border: 2px solid white;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   background-color: rgba(21, 60, 60, 0.7);
   width: 800px;
   height: 550px;
@@ -59,321 +58,327 @@ hr {
   padding: 10px;
   display: inline-block;
   text-align: center;
-  animation: borderAnimation 2s infinite alternate, colorChange 4s infinite; 
+  animation: borderAnimation 2s infinite alternate, colorChange 4s infinite;
   transition: background-color 0.3s;
 }
 
 @keyframes borderAnimation {
   0% {
     border-color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
   100% {
-    border-color: #3498db; 
-    box-shadow: 0 0 20px #3498db, 0 0 40px #debc12, 0 0 60px #3498db; 
-    transform: scale(1.0); 
+    border-color: #3498db;
+    box-shadow: 0 0 20px #3498db, 0 0 40px #debc12, 0 0 60px #3498db;
+    transform: scale(1);
   }
 }
 .description:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   background-color: rgba(68, 93, 44, 0.9);
 }
 /*Education Part*/
 .education {
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    max-width: 800px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    animation: educationAnimation 2s infinite alternate, colorChange 4s infinite; 
-    transition: background-color 0.3s;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  max-width: 800px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  animation: educationAnimation 2s infinite alternate, colorChange 4s infinite;
+  transition: background-color 0.3s;
 }
 .education ul {
-    list-style: none;
-    justify-content: center;
+  list-style: none;
+  justify-content: center;
 }
 .primary {
-    border: 3px solid white;
-    margin: 10px;
-    padding-top: 15px;
-    width: 500px;
-    background-color: rgba(50, 168, 162,0.3);
+  border: 3px solid white;
+  margin: 10px;
+  padding-top: 15px;
+  width: 500px;
+  background-color: rgba(50, 168, 162, 0.3);
 }
 
 .education:hover {
-    transform: scale(1.1);
-    background-color: rgba(222, 2, 2, 0.9);
+  transform: scale(1.1);
+  background-color: rgba(222, 2, 2, 0.9);
 }
 
 .primary:hover {
-    background-color: rgba(240, 81, 2,0.9);
-    transform: scale(1.1);
+  background-color: rgba(240, 81, 2, 0.9);
+  transform: scale(1.1);
 }
 /*Animatiom Part */
 @keyframes educationAnimation {
-    0% {
-      border-color: white;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-    }
-    100% {
-      border-color: #f07502; 
-      box-shadow: 0 0 20px #f07502, 0 0 40px #02a649, 0 0 60px #f07502; 
-      transform: scale(1.0); 
-    }
+  0% {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
+  100% {
+    border-color: #f07502;
+    box-shadow: 0 0 20px #f07502, 0 0 40px #02a649, 0 0 60px #f07502;
+    transform: scale(1);
+  }
+}
 /*Table part */
 .skills {
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    max-width: 800px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    animation: skillsAnimation 2s infinite alternate, colorChange 4s infinite; 
-    transition: background-color 0.3s;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  max-width: 800px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  animation: skillsAnimation 2s infinite alternate, colorChange 4s infinite;
+  transition: background-color 0.3s;
 }
 
 .table {
-    width: 50%; 
-    margin-left: auto;
-     margin-right: auto;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: rgba(240, 46, 2,0.7);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: rgba(240, 46, 2, 0.7);
 }
 
 .skills:hover {
-    transform: scale(1.1);
-    background-color: rgba(2, 240, 232, 0.6);
+  transform: scale(1.1);
+  background-color: rgba(2, 240, 232, 0.6);
 }
 .table:hover {
-    transform: scale(1.1);
-    background-color: rgba(75, 2, 166, 0.6);
+  transform: scale(1.1);
+  background-color: rgba(75, 2, 166, 0.6);
 }
 
 @keyframes skillsAnimation {
-    0% {
-      border-color: white;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-    }
-    100% {
-      border-color: #02a649; 
-      box-shadow: 0 0 20px #02a649, 0 0 40px #02a649, 0 0 60px #f07502; 
-      transform: scale(1.0); 
-    }
+  0% {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
+  100% {
+    border-color: #02a649;
+    box-shadow: 0 0 20px #02a649, 0 0 40px #02a649, 0 0 60px #f07502;
+    transform: scale(1);
+  }
+}
 /*Projects*/
 .project {
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    font-size: 20px;
-    width: 500px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: left;
-    animation: projectAnimation 2s infinite alternate, colorChange 4s infinite; 
-    transition: background-color 0.3s;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  font-size: 20px;
+  width: 500px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: left;
+  animation: projectAnimation 2s infinite alternate, colorChange 4s infinite;
+  transition: background-color 0.3s;
 }
 
 .project h2 {
-    text-align: center;
-    font-size: 29px;
+  text-align: center;
+  font-size: 29px;
 }
 
 .project ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .project:hover {
-    transform: scale(1.1);
-    background-color: rgba(230, 174, 21,0.7);
+  transform: scale(1.1);
+  background-color: rgba(230, 174, 21, 0.7);
 }
 
 @keyframes projectAnimation {
-    0% {
-      border-color: white;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-    }
-    100% {
-      border-color: #991d0f; 
-      box-shadow: 0 0 20px #02a649, 0 0 40px #991d0f, 0 0 60px #f07502; 
-      transform: scale(1.0); 
-    }
+  0% {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
+  100% {
+    border-color: #991d0f;
+    box-shadow: 0 0 20px #02a649, 0 0 40px #991d0f, 0 0 60px #f07502;
+    transform: scale(1);
+  }
+}
 
 .footeri {
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    font-size: 20px;
-    width: 500px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    animation: footerAnimation 2s infinite alternate; 
-    transition: background-color 0.3s;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  font-size: 20px;
+  width: 500px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  animation: footerAnimation 2s infinite alternate;
+  transition: background-color 0.3s;
 }
 
 .footeri:hover {
-    transform: scale(1.1);
-    background-color: rgba(14, 101, 213, 0.4);
+  transform: scale(1.1);
+  background-color: rgba(14, 101, 213, 0.4);
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
   }
+}
 
 .footeri img:hover {
-    width: 120px;
+  width: 120px;
 }
 
 @keyframes footerAnimation {
-    0% {
-      border-color: white;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-    }
-    100% {
-      border-color: #59166b; 
-      box-shadow: 0 0 20px #59166b, 0 0 40px #59166b, 0 0 60px #f07502; 
-      transform: scale(1.0); 
-    }
+  0% {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    border-color: #59166b;
+    box-shadow: 0 0 20px #59166b, 0 0 40px #59166b, 0 0 60px #f07502;
+    transform: scale(1);
+  }
 }
-  /*Project page start here*/
+/*Project page start here*/
 
 .projekti1 {
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    font-size: 20px;
-    width: 900px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    animation: footerAnimation 2s infinite alternate, colorChange 4s infinite; 
-    transition: background-color 0.3s;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  font-size: 20px;
+  width: 900px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  animation: footerAnimation 2s infinite alternate, colorChange 4s infinite;
+  transition: background-color 0.3s;
 }
 
 .projekti1:hover {
-    transform: scale(1.1);
-    background-color: rgba(14, 101, 213, 0.4);
+  transform: scale(1.1);
+  background-color: rgba(14, 101, 213, 0.4);
 }
 .projekti1 button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    animation: moveButton 2s linear infinite, changeColor 4s linear infinite;
-  }
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  animation: moveButton 2s linear infinite, changeColor 4s linear infinite;
+}
 
 .projekti1 button:hover {
-    transform: scale(1.1);
-    animation-play-state: paused;
-    background-color: rgba(232, 114, 12, 0.7) !important;
+  transform: scale(1.1);
+  animation-play-state: paused;
+  background-color: rgba(232, 114, 12, 0.7) !important;
 }
-  
+
 /* Animation keyframes */
 @keyframes moveButton {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(10px); 
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes changeColor {
-    0% {
-      background-color: #3498db; 
-    }
-    25% {
-      background-color: #e74c3c; 
-    }
-    50% {
-      background-color: #2ecc71; 
-    }
-    75% {
-      background-color: #f39c12; 
-    }
-    100% {
-      background-color: #3498db;
-    }
+  0% {
+    background-color: #3498db;
+  }
+  25% {
+    background-color: #e74c3c;
+  }
+  50% {
+    background-color: #2ecc71;
+  }
+  75% {
+    background-color: #f39c12;
+  }
+  100% {
+    background-color: #3498db;
+  }
 }
 /*Contact me starts here*/
 
 .message {
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    font-size: 20px;
-    width: 600px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    transition: background-color 0.3s;
-    animation: messageAnimation 2s infinite alternate;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  font-size: 20px;
+  width: 600px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s;
+  animation: messageAnimation 2s infinite alternate;
+}
+
+.message:hover {
+  transform: scale(1.1);
+  background-color: #23638d;
 }
 
 input {
-    background-color: #34e80c;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    animation: pulsate 1.5s ease-in-out infinite;
-  }
+  background-color: #34e80c;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  animation: pulsate 1.5s ease-in-out infinite;
+}
 
-  @keyframes pulsate {
-    0%, 100% {
-      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); 
-    }
+@keyframes pulsate {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
   }
+  50% {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+  }
+}
 
 textarea {
-    width: 60%;
-    margin: 10px;
-    padding: 14px;
-    font-size: 16px;
-    border: 2px solid #2ecc71;
-    border-radius: 6px;
-    background-color: #ecf0f1;
-    color: #333;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
-    resize: none;
-    background-color: #34e80c;
-    animation: colorChanges 5s infinite, pulsate 1.5s ease-in-out infinite;
-  }
+  width: 60%;
+  margin: 10px;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #2ecc71;
+  border-radius: 6px;
+  background-color: #ecf0f1;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+  resize: none;
+  background-color: #34e80c;
+  animation: colorChanges 5s infinite, pulsate 1.5s ease-in-out infinite;
+}
 /*
 @keyframes colorChanges {
     0% {
@@ -388,120 +393,123 @@ textarea {
 }*/
 
 textarea:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes messageAnimation {
-    0% {
-      border-color: white;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-    }
-    100% {
-      border-color: #34e80c; 
-      box-shadow: 0 0 20px #34e80c, 0 0 40px #34e80c, 0 0 60px #f07502; 
-      transform: scale(1.0); 
-    }
+  0% {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    border-color: #34e80c;
+    box-shadow: 0 0 20px #34e80c, 0 0 40px #34e80c, 0 0 60px #f07502;
+    transform: scale(1);
+  }
 }
 
-.message button { 
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    animation: moveButton 2s linear infinite, changeColor2 4s linear infinite;
+.message button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  animation: moveButton 2s linear infinite, changeColor2 4s linear infinite;
 }
 @keyframes changeColor2 {
-    0% {
-      background-color: #23638d; 
-    }
-    25% {
-      background-color: #5eaa0d; 
-    }
-    50% {
-      background-color: #f8d407; 
-    }
-    75% {
-      background-color: #bf12f3; 
-    }
-    100% {
-      background-color: #23638d;
-    }
+  0% {
+    background-color: #23638d;
+  }
+  25% {
+    background-color: #5eaa0d;
+  }
+  50% {
+    background-color: #f8d407;
+  }
+  75% {
+    background-color: #bf12f3;
+  }
+  100% {
+    background-color: #23638d;
+  }
 }
 
 .message button:hover {
-    animation-play-state: paused;
-    background-color: #991d0f !important;
+  animation-play-state: paused;
+  background-color: #991d0f !important;
 }
 
 /*Social Part*/
 
 .social {
-    display: inline-flex;
-    border: 1px solid white;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
-    background-color: rgba(21, 60, 60, 0.7);
-    font-size: 20px;
-    width: 400px;
-    height: 200px;
-    margin: 40px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    animation: messageAnimation 2s infinite alternate;
+  display: inline-flex;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+  background-color: rgba(21, 60, 60, 0.7);
+  font-size: 20px;
+  width: 400px;
+  height: 200px;
+  margin: 40px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  animation: messageAnimation 2s infinite alternate;
 }
 
 .social h2 {
-    font-size: 24px;
-    color: #3498db; 
-    margin-bottom: 20px;
-  }
-  
+  font-size: 24px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
 
-  .social a {
-    position: relative;
-    display: inline-block;
-    margin: 0 20px;
-    text-decoration: none;
-    color: #3498db; 
-    overflow: hidden;
+.social a {
+  position: relative;
+  display: inline-block;
+  margin: 0 20px;
+  text-decoration: none;
+  color: #3498db;
+  overflow: hidden;
+}
+
+.social:hover {
+  transform: scale(1.1);
+  background-color: #991d0f;
+}
+
+.social img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.social a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3498db;
+  transform-origin: right;
+  animation: underlineAnimation 2s infinite;
+}
+
+@keyframes underlineAnimation {
+  0% {
+    transform: scaleX(0);
   }
-  
-  .social img {
-    width: 100px; 
-    height: auto;
-    border-radius: 50%; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  50% {
+    transform: scaleX(1);
   }
-  
-  
-  .social a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #3498db;
-    transform-origin: right;
-    animation: underlineAnimation 2s infinite; 
+  100% {
+    transform: scaleX(0);
   }
-  
-  @keyframes underlineAnimation {
-    0% {
-      transform: scaleX(0);
-    }
-    50% {
-      transform: scaleX(1);
-    }
-    100% {
-      transform: scaleX(0);
-    }
-  }
+}
