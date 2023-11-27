@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font: 30px;
+}
+
+.first-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(1, 1, 46, 0.9);
+    font-size: 30px;
+}
+
+.first-div h1 {
+    color: white;
+    font-size: 40px;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+.first-div p {
+    color: bisque;
+    padding: 10px;
+}
+
+.first-div button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.second-div {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    height: 100vh;
+}
+
+.third-div {
+    display: flex;
+    flex-direction: column-reverse;
+}
