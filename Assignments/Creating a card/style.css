@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 2em;
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.card-container {
+    width: 455px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    border-radius: 15px;
+    padding: 2em 1em;
+    display: flex;
+    gap: 1em;
+    box-shadow: 1px 5px 5px 1px yellow;
+    flex-direction: column;
+}
+
+.card-container:hover {
+    background-image: linear-gradient(0deg, rgba(24, 109, 9, 0.802) 0%, rgba(255, 255, 255, 0) 50%, rgba(8, 100, 255, 0.9) 100%);
+}
+
+.merc {
+    font-size: 23px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.card-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    justify-content: space-between;
+}
+
+img {
+    width: 450px;
+    height: 270px;
+    align-self: center;
+}
+
+.spec-price {
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.spec span {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.car-specifics {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    font-weight: bold;
+}
+
+.price {
+    align-self: flex-end;
+}
+
+.price span {
+    font-size: 19px;
+    font-weight: bold;
+    color: orange;
+    text-transform: uppercase;
+}
+
+.car-price span {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.buy {
+    display: flex;
+    gap: 3px;
+}
+
+.buy-button,
+.down {
+    text-transform: uppercase;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: unset;
+    font-size: 1em;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buy-button {
+    flex-grow: 1;
+}
+
+.down {
+    padding: 0.6em;
+}
