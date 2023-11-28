@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.entryarea {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+input {
+    width: 200px;
+    margin: 20px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.label {
+    grid-column: 1;
+    grid-row: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.entryarea:focus-within .label {
+    opacity: 1;
+}

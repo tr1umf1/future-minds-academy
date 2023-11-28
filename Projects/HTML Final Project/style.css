@@ -379,7 +379,7 @@ textarea {
   background-color: #34e80c;
   animation: colorChanges 5s infinite, pulsate 1.5s ease-in-out infinite;
 }
-/*
+
 @keyframes colorChanges {
     0% {
       background-color: #ecf0f1;
@@ -390,7 +390,7 @@ textarea {
     100% {
       background-color: #ecf0f1;
     }
-}*/
+}
 
 textarea:hover {
   animation-play-state: paused;
