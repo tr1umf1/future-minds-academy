@@ -5,19 +5,18 @@
 }
 
 body {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 5fr; 
 }
 
 .headeri {
     background-color: navy;
     height: 100vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: flex-end;
-    flex-wrap: wrap;
 }
 
 .headeri h1 {
@@ -32,24 +31,24 @@ body {
 }
 
 .headeri nav {
+    justify-self: flex-start;
     align-self: center;
-    position: relative;
-    top: 20px;
-    left: 50px;
-    flex-wrap: wrap;
+    margin-left: 50px;
 }
 
 nav ul li {
     list-style-type: none;
-    float: left;
-
+    display: inline-block;
+    margin-right: 15px;
 }
 
 button {
-    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
+    position: absolute;
+    top: 480px;
+    left: 150px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -63,6 +62,7 @@ button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
+
 nav ul li a:hover {
     background-color: white;
     color: navy
@@ -70,27 +70,24 @@ nav ul li a:hover {
 
 main {
     padding: 25px;
-    flex: 4;
+    grid-column: 2;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     background-color: rgb(72, 229, 72);
 }
 
 .second-header {
     margin-bottom: 40px;
-    display: flex;
-    align-self: center;
+    justify-self: center;
     text-transform: uppercase;
     font-size: 1.4em;
     color: white;
 }
 
 .recent-popular li {
-    float: left;
-    margin-left: 16px;
-    list-style-type: none;
+    display: inline-block;
+    margin-right: 16px;
 }
 
 .recent-popular li a {
@@ -109,18 +106,15 @@ main {
     text-decoration-color: white;
 }
 
-hr {
-    border-color: red;
-}
-
 main .posts {
-    display: flex;
-    flex-direction: column;
     border: 2px solid blue;
     padding: 20px;
     border-radius: 25px;
     overflow-y: auto;
-    background-color: rgb(255, 255, 203)
+    background-color: rgb(255, 255, 203);
+}
+hr {
+    border-color: red;
 }
 .articles {
     margin-bottom: 25px;
@@ -130,14 +124,14 @@ main .posts {
 }
 
 .author-photo {
-    align-self: flex-end;
+    justify-self: flex-start;
 }
 
 .name-profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     margin: 0;
+    text-align: flex-start;
 }
 
 .social {
@@ -151,7 +145,7 @@ main .posts {
     height: 45px;
     border: 3px solid navy;
     border-radius: 50%;
-    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 .paragraphs {
@@ -171,4 +165,5 @@ main .posts {
 
 .author {
     color: green;
+    text-align: right;
 }
