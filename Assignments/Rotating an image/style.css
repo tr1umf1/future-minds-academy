@@ -1,0 +1,32 @@
+@keyframes blurAnimation {
+    from {
+        filter: blur(10px); 
+    }
+    to {
+        filter: blur(0px); 
+    }
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+main img {
+    margin: 100px;
+    transition: filter 2s linear; 
+    animation: blurAnimation 2s forwards, rotateAnimation 4s linear infinite;
+}
+
+
+main img.blurred {
+    animation-delay: 2s; 
+}
+
+main img:hover {
+    animation-play-state: paused;
+}
