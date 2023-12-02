@@ -28,5 +28,5 @@ main img.blurred {
 }
 
 main img:hover {
-    animation-play-state: paused;
+        animation: none;
 }
