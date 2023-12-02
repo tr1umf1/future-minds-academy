@@ -1,39 +1,111 @@
-* {
+@keyframes rotating {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes moveup {
+    from {
+        opacity: 0;
+        margin: 15px 0;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+body {
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    border: 2px solid black;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 400px;
-    margin: 20px auto;
+form {
+    width: 25rem;
+    padding: 10px 20px;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    background-color: rgb(214, 196, 0);
 }
 
-.entryarea {
-    display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
+input,
+label {
+    padding: 10px;
+
 }
 
 input {
-    width: 200px;
-    margin: 20px;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    margin: 0px 7px;
+    border-collapse: collapse;
 }
 
-.label {
-    grid-column: 1;
-    grid-row: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
+label {
+    font-size: 0.9em;
+    position: absolute;
+    visibility: hidden;
 }
 
-.entryarea:focus-within .label {
-    opacity: 1;
+.first-name1 {
+    top: 54px;
+}
+
+.last-name1 {
+    top: 117px;
+}
+
+.email1 {
+    top: 180px;
+}
+
+.first-name:focus~.first-name1 {
+    animation: moveup 650ms ease 0s 1 normal forwards;
+}
+
+.last-name:focus~.last-name1 {
+    animation: moveup 650ms ease 0s 1 normal forwards;
+}
+
+.email:focus~.email1 {
+    animation: moveup 650ms ease 0s 1 normal forwards;
+}
+
+input:focus {
+    outline: 2px solid rgba(72, 255, 0, 0.9);
+    outline-offset: -5px;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.butoni {
+    height: 2.5rem;
+    width: 5rem;
+    background-color: rgba(72, 255, 0, 0.9);
+    color: white;
+    border: none;
+}
+
+.butoni:hover {
+    cursor: pointer;
+}
+
+.butoni:active {
+    background-color: rgb(20, 92, 81);
+}
+
+.circle {
+    height: 2.5rem;
+    animation-name: rotate;
+    animation: rotating 1000ms linear 0s infinite normal none;
 }
