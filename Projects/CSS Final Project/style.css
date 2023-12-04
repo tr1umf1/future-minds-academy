@@ -90,3 +90,82 @@ nav li:hover {
 nav li.active:hover {
     background-color: rgba(196, 75, 95, 0.9);
 }
+/*Second part*/
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.first-icon {
+    font-size: 24px; 
+    margin: 10px; 
+    border-radius: 50%;
+    color: gray;
+    background-color: #e0e0e0; 
+    padding: 10px; 
+    transition: box-shadow 0.3s;
+}
+
+.header p{
+    margin: 0;
+    font-size: 20px;
+}
+
+.header:after{
+    content: "See more"; 
+    position: absolute;
+    border: 2px solid grey;
+    background-color: grey;
+    color: white;
+    bottom: -5px;
+    left: 45%;
+    transform: translateX(-50%);
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.header:hover i{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header:hover:after, .header2:hover:after {
+    opacity: 1; 
+}
+
+.second-icon {
+    margin-top: 20px;
+    margin-left: 600px; 
+    border-radius: 50%;
+    background-color: #e0e0e0; 
+    color: gray;
+    transition: box-shadow 0.3s;
+}
+
+.second-icon:after {
+    content: "Search"; 
+    position: absolute;
+    border: 2px solid grey;
+    background-color: grey;
+    width: 50px;
+    color: black;
+    top: 60px;
+    right: 380px;
+    transform: translateX(-50%);
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.second-icon:hover:after {
+    opacity: 1; 
+}
+
+.second-icon:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
