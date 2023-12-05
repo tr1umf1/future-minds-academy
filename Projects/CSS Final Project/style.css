@@ -7,8 +7,12 @@
 body {
     display: flex;
     flex-direction: row;
+    background-color: rgb(207, 206, 206);
 }
-
+/*
+main {
+    background-color: rgb(207, 206, 206);
+}*/
 nav {
     background-image: url(images/sidebar-1.jpg);
     background-position: -500px;
@@ -69,6 +73,12 @@ nav li a {
     color: white;
     padding: 5px;
     border-radius: 10px;
+    justify-content: space-between;
+}
+
+.prova {
+    display: flex;
+    align-items: center;
 }
 
 .active {
@@ -95,6 +105,7 @@ nav li.active:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
+    background-color: rgb(207, 206, 206);
 }
 
 .header {
@@ -118,14 +129,15 @@ nav li.active:hover {
     font-size: 20px;
 }
 
-.header:after{
+.header::after{
     content: "See more"; 
     position: absolute;
     border: 2px solid grey;
     background-color: grey;
     color: white;
     bottom: -5px;
-    left: 45%;
+    left: 90%;
+    width: 60px;
     transform: translateX(-50%);
     opacity: 0; 
     transition: opacity 0.3s; 
@@ -135,12 +147,19 @@ nav li.active:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.dashboard {
+    display: flex;
+    flex-direction: flex-end;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
 .header:hover:after, .header2:hover:after {
     opacity: 1; 
 }
 
 .second-icon {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 600px; 
     border-radius: 50%;
     background-color: #e0e0e0; 
@@ -148,13 +167,13 @@ nav li.active:hover {
     transition: box-shadow 0.3s;
 }
 
-.second-icon:after {
+.header2:after {
     content: "Search"; 
     position: absolute;
     border: 2px solid grey;
     background-color: grey;
     width: 50px;
-    color: black;
+    color: white;
     top: 60px;
     right: 380px;
     transform: translateX(-50%);
@@ -168,4 +187,142 @@ nav li.active:hover {
 
 .second-icon:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header3 {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: gray;
+    font-size: 15px;
+}
+
+.header3:after {
+    content: "Dashboard"; 
+    position: absolute;
+    border: 2px solid grey;
+    background-color: grey;
+    color: white;
+    top: 50px;
+    right: 300px;
+    transform: translateX(-50%);
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.header3:hover:after {
+    opacity: 1; 
+}
+
+
+.alert-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: 32px; 
+    margin-left: 75px;
+}
+
+.notification-indicator {
+    background-color: red;
+    color: white;
+    border-radius: 70%;
+    font-size: 10px;
+    margin-right: 5px; 
+    padding: 5px;
+    margin-top: -20px; 
+    margin-left: -1px;
+    z-index: 1;
+}
+
+.notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    color: #131313;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notification:hover {
+    margin: 10px;
+}
+
+.alert-icon:hover .notification {
+    opacity: 1;
+    visibility: visible;
+}
+
+.notification-content {
+    width: 200px;
+    text-align: left;
+}
+
+.notification-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-content li {
+    margin-bottom: 8px;
+    transition: background-color 0.3s;
+}
+
+.notification-content li:hover {
+    background-color: orange;
+    color: white;
+}
+
+.notification-icon {
+    font-size: 24px;
+    margin-left: 20px;
+    position: absolute;
+    left: -44px;
+    color: gray;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: 10px; 
+    margin-left: 45px;
+    color: gray;
+}
+
+.profile:after {
+    content: "profile"; 
+    position: absolute;
+    border: 2px solid grey;
+    background-color: grey;
+    color: white;
+    top: 40px;
+    left: 50px;
+    transform: translateX(-50%);
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+
+.profile:hover:after {
+    opacity: 1; 
+}
+
+.information {
+
 }
