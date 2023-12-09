@@ -10,10 +10,6 @@ body {
     background-color: rgb(207, 206, 206);
     font-family: roboto;
 }
-/*
-main {
-    background-color: rgb(207, 206, 206);
-}*/
 nav {
     background-image: url(images/sidebar-1.jpg);
     background-position: -500px;
@@ -724,6 +720,12 @@ section{
         display: block; 
     }
 
+    .information-title {
+        position: relative;
+        font-size: 20px;
+        top: -5px;
+    }
+
     .information-bottom {
         flex-direction: column;
         padding: 0;
@@ -739,9 +741,10 @@ section{
     tr{
         justify-content: space-between;
     }
+
     .cards-container {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         width: 100%;
     }
     
