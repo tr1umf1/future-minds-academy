@@ -505,30 +505,28 @@ section{
 /*Ndarje fillon pjesa tjeter*/
 .cards-container {
     margin-top: 4rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Two columns */
     gap: 3rem;
     box-sizing: border-box;
     margin: 20px;
-    flex-wrap: wrap; 
+    width: 97%;
 }
 
 .cards-section-title {
     margin: 20px;
     font-size: 29px;
+    grid-column: span 2; /* Spanning two columns */
 }
 
 .card-1,
 .card-2,
 .card-3 {
-    flex: 1; 
-    max-width: calc(50% - 1.5rem); 
+    flex: 1;  
     padding: 1rem;
     margin-bottom: 1.3rem;
     border-radius: 10px;
     background-color: var(--body-element-color);
-    display: flex;
-    flex-direction: column;
     background-color: white;
 }
 
@@ -539,11 +537,12 @@ section{
     text-align: center;
 }
 
-.cards-section-title{
+.cards-section-title {
     text-align: start;
     top: 150px;
     margin-bottom: 80px; 
- }
+    grid-column: span 2; /* Spanning two columns */
+}
 
 .card-description {
     margin: 0;
@@ -634,13 +633,14 @@ section{
     color: red;
 }
 
-.hamburger-icon {
+.menu-icon {
     display: none;
 }
 
 .cards-section-title {
     text-align: start;
 }
+
 
  footer{
     display: flex;
@@ -671,6 +671,7 @@ section{
     body {
         display: flex;
         flex-direction: column;
+        margin: 20px;
     }
     main {
         flex: 1;
@@ -705,16 +706,24 @@ section{
         border-radius: 10px;
         justify-content: space-between;
     }
-    .dashboard{
-        margin-top: 10px;
-        position: relative;
-        left: 5%;
-    }
-
-    .first-icon, .header2, .search-bar, .third-icon, .notification-icon, .notification-icon, .notification-indicator, .header3, .header1, .header, .profile{
+        .dashboard{
+            margin-top: 10px;
+            position: relative;
+            left: 5%;
+        }
+    .first-icon, .header2, .header2:after, .search-bar, .third-icon, .notification-icon, .notification-icon, .notification-indicator, .header3, .header1, .header, .profile{
         display: none;
     }
-    .hamburger-icon{
+
+    .header2 {
+        margin: 20px  10px 10px 0;
+        display: block;
+        font-size: 10px;
+        position: relative;
+        left: 52%;
+    }
+
+    .menu-icon{
         margin: 20px 20px 10px 0;
         font-size: 30px;
         display: block; 
@@ -743,16 +752,17 @@ section{
     }
 
     .cards-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
-    
+
     .card-1,
     .card-2,
     .card-3 {
-        flex: 0 0 100%;
-        margin: 10px;
+        flex: 1;
+        max-width: 100%; 
+        margin: 30px 10px 10px 10px;
     }
 
     footer {
@@ -770,13 +780,15 @@ section{
         display: flex;
         flex-direction: column; 
     }
+    .header2 {
+        display: none;
+    }
     
     .card-1,
     .card-2,
     .card-3 {
         flex: 1; 
     }
-
     
     .footer-descriptions {
         padding: .2rem;
