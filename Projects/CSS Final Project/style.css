@@ -715,14 +715,6 @@ section{
         display: none;
     }
 
-    .header2 {
-        margin: 20px  10px 10px 0;
-        display: block;
-        font-size: 10px;
-        position: relative;
-        left: 52%;
-    }
-
     .menu-icon{
         margin: 20px 20px 10px 0;
         font-size: 30px;
