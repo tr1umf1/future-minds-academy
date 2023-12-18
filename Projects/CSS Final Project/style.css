@@ -84,9 +84,6 @@ nav li.active:hover {
 nav li:hover {
   background-color: rgba(195, 184, 184, 0.1);
 }
-main {
-  padding: 0 20px;
-}
 .description {
   display: flex;
   justify-content: space-between;
@@ -124,7 +121,7 @@ main {
   display: flex;
   padding-top: 20px;
   font-size: 20px;
-  left: -1%;
+  left: -3%;
 }
 .header1:after, .header2:after, .header3:after, .header::after, .profile:after {
   position: absolute;
@@ -188,8 +185,8 @@ main {
 .notification-indicator {
   background-color: red;
   color: var(--color-white);
-  border-radius: 70%;
-  font-size: 10px;
+  border-radius: 90%;
+  font-size: 9px;
   margin-right: 5px;
   padding: 5px;
   margin-top: -20px;
@@ -267,11 +264,12 @@ iframe {
   padding: 1rem;
   margin-right: 1rem;
   height: auto;
-  background-color: #31a731;
+  background: linear-gradient(to right, #60b65e, #31a731);
   color: var(--color-white);
   font-size: 2rem;
   top: -1.6rem;
   right: -0.5rem;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); 
 }
 .information-title {
   top: -15px;
@@ -389,7 +387,7 @@ tr {
 .card-title {
   text-align: center;
   padding-bottom: 1rem;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 .img-edit-icons {
   top: -3rem;
