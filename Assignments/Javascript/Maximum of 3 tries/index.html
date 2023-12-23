@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum of 3 tries</title>
+</head>
+<body>
+    <script>
+        let password = "12341234";
+        let maxTries = 3;
+        let userInput;
+
+        do {
+        userInput = parseInt(prompt("Write your password:"));
+        if (userInput == password) {
+            alert("Welcome!");
+          break;
+        } else {
+          maxTries--;
+
+          if (maxTries > 0) {
+            alert(`Incorrect password --> ${maxTries} ${maxTries == 1 ? "try" : "tries"} left.`);
+          } else {
+            document.write("Sorry, you dont have any tries left");
+          }
+        }
+      } while (maxTries > 0);
+    </script>
+</body>
+</html>

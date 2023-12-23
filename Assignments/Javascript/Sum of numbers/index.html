@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of numbers</title>
+</head>
+<body>
+    <script>
+        let number = Math.abs(parseInt(prompt("Shkruje nje numer:")));
+        let sum = 0;
+
+        while (number != 0) {
+            number = Math.abs(parseInt(prompt("Shkruje nje numer:")));
+            sum += number;
+        }
+        document.write(`Shuma e ketyre numrave qe shkrove eshte ${sum}!`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hailstone Numbers</title>
+  </head>
+  <body>
+    <script>
+      let numberUser = Math.abs(parseInt(prompt("Enter a number:")));
+
+      while (isNaN(numberUser) || numberUser <= 0) {
+        alert("Invalid input. Please enter a number.");
+        userNumber = Math.abs(parseInt(prompt("Enter a number:")));
+      }
+
+      for (; numberUser !== 1; ) {
+        alert(userNumber);
+        if (numberUser % 2 == 0) {
+          numberUser /= 2;
+        } else {
+          numberUser = numberUser * 3 + 1;
+        }
+      }
+      alert(1);
+    </script>
+  </body>
+</html>
