@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of three numbers</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Enter a number"));
+        let b = parseInt(prompt("Enter a number again!"));
+        let c = parseInt(prompt("Enter a number again!"));
+        let largestNumber;
+        // let largestNumber = Math.max(a, b, c); //This is a short way to do it without using if and else
+        if (a > b && a > c) {
+        largestNumber = a;
+        } else if (b > a && b > c) {
+        largestNumber = b;
+        } else if (c > a && c > b) {
+        largestNumber = c;
+        } else {
+        largestNumber = "Here are 2 or more equal numbers so maybe add lower numbers.";
+        }
+        console.log(`The largest number is: ${largestNumber}`);
+    </script>
+</body>
+</html>

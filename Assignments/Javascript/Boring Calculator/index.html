@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boring Calculator</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("Write a number here:"));
+      let operator = prompt("What operation do you want to apply?").toLowerCase();
+      let num2 = parseInt(prompt("Write another number here:"));
+      let result;
+      if (isNaN(num1) || isNaN(num2)) {
+        throw new Error("!!Please write a valid number!!");
+      }
+      if (
+        operator != "+" ||
+        operator != "-" ||
+        operator != "*" ||
+        operator != "/" ||
+        operator != "%"
+      ) 
+      switch (operator) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          result = num1 / num2;
+          break;
+        case "%":
+          result = num1 % num2;
+          break;
+        default:
+        throw new Error(
+            "Please write one of the following operations: addition, multiplication, substraction, division, or modulus."
+        );
+      }
+
+      console.log(result);
+    </script>
+  </body>
+</html>
