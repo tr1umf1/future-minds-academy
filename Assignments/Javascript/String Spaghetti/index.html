@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Spaghetti</title>
+  </head>
+  <body>
+    <script>
+      let string = `hello, dolly!  `;
+      string = string.trim();
+      string = string.toUpperCase();
+      string = string.charAt(0);
+      console.log(string);
+
+      let time = "05:36 PM";
+      let hours = parseInt(time.substring(1, 2)) + "h";
+      let minutes = parseInt(time.substring(3, 5)) + "min";
+      let period = time.substring(1, 8);
+      console.log(time);
+      console.log(hours);
+      console.log(minutes);
+      console.log(period);
+      
+      let cityTemperature = "New York, 15°C";
+      let tem = cityTemperature.indexOf(",");
+      let city = cityTemperature.substring(0, tem);
+      let temperature = parseInt(cityTemperature.substring(tem + 2, cityTemperature.length - 2));
+      console.log(`City of : ${city} and temperature of the city is: ${temperature}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Exercises</title>
+</head>
+<body>
+    <script>
+        let i;
+        function helloWorld() {
+            for (i= 0; i<10; i++) {
+                console.log("Hello");
+            }
+        }
+
+        function string(string) {
+            console.log(string);
+        }
+
+        function convert(km) {
+        const equation = km * 0.621371;
+        return console.log(equation);
+        } 
+        function areaCircle (radius) {
+            const pi = 3.14
+            let equation = pi * Math.pow(radius, 2);
+            return equation;
+        }
+        let area = areaCircle(7);
+          function person(name, surname) {
+            console.log(`Welcome ${name} ${surname} have a seat please!`);
+        }
+
+        function  isWorkingCitizen(age) {
+            return console.log(age >= 18 && age <65);
+        }
+         function isEven(number) {
+        return console.log(number % 2 === 0);
+        }
+        helloWorld();
+        string("Hello people 2");
+        console.log(area);
+        convert(9);
+        person("Triumf", "Avdyli");
+        isWorkingCitizen(56);
+        isEven(25);
+    </script>
+</body>
+</html>
