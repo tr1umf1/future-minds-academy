@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels and Consonants</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('keypress', (e) => {
+            let letter = e.key.toLowerCase();
+            let vowels = 'aeiouy'
+            let consonants = 'bcdfghjklmnpqrstvwxz'
+            let numbers = '0123456789'
+
+            if (vowels.includes(letter)) {
+                console.log(`The pressed key '${letter}' is a vowel`);
+            }
+
+            else if (consonants.includes(letter)) {
+                console.log(`The pressed key '${letter}' is a consonant`);
+            }
+
+            else if (numbers.includes(letter)) {
+                console.log(`The pressed key '${letter}' is a number`);
+            }
+
+            else {
+                console.log(`The pressed key '${letter}' is a symbol`);
+            }
+        });
+    </script>
+</body>
+</html>
