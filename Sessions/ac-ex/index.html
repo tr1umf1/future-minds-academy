@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change AC Temperature</title>
+    <style>
+        .wrapper {
+            width: 400px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .ac {
+            width: 400px;
+            height: 140px;
+            background-image: url(ac-photo.png);
+        }
+        .ac h4 { padding: 50px; }
+        .wrapper select {
+            width: 100px;
+            margin: 10px;
+        }
+        .wrapper button {width: 100px;}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="ac">
+            <h4 id="currentTemp">0</h4>
+        </div>
+
+        <select id="tempNum">
+            <option value="off">Off</option>
+            <option value="1">1</option>
+        </select>
+        <br>
+        <button id="setTempBtn">Set Temp</button>
+    </div>
+
+    <script>
+        let tempNum = document.getElementById("tempNum");
+        let buildHTML = '<option value="Off">Off</option>';
+    
+        for (let i = 1; i <= 30; i++) {
+            buildHTML += '<option value="' + i + '">' + i + '</option>';
+        }
+    
+        tempNum.innerHTML = buildHTML;
+    
+        let currentTemp = document.getElementById("currentTemp");
+        let acDisplay = document.getElementById("acDisplay");
+    
+        let setTempBtn = document.getElementById('setTempBtn');
+        setTempBtn.addEventListener("click", function () {
+            currentTemp.innerHTML = tempNum.value;
+    
+            // Add a simple opacity animation
+            currentTemp.style.transition = "opacity 1s ease";
+            currentTemp.style.opacity = "0";
+    
+            setTimeout(function () {
+                currentTemp.style.opacity = "1";
+            }, 1000);
+    
+            if (tempNum.value === 'off') {
+                acDisplay.style.backgroundImage = "none";
+                acDisplay.style.backgroundColor = "#ccc";
+            } else {
+                acDisplay.style.backgroundImage = "url('ac-photo.png')";
+                acDisplay.style.backgroundColor = "transparent";
+            }
+        });
+    </script>
+</body>
+
+</html>
