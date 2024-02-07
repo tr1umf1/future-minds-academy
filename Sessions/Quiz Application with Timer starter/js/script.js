@@ -21,7 +21,7 @@ start_btn.addEventListener('click', (event) => {
 
 exit_btn.addEventListener('click', (event) => {
     info_box.classList.remove("activeInfo");
-})  
+})
 
 start_quiz.addEventListener('click', (event) => {
     info_box.classList.remove("activeInfo");
@@ -33,11 +33,11 @@ start_quiz.addEventListener('click', (event) => {
 next_btn.addEventListener('click', (event) => {
     if (counter < questions.length - 1) {
         counter++;
+        startTimer(15);
         showQuestion(counter);
         clearInterval(timer);
-        startTimer(15);
         resetOptions();
-    }  else {
+    } else {
         showResult();
     }
 })
@@ -49,13 +49,13 @@ function showQuestion(index) {
 
     que_text.innerHTML = "<span>" + questions[index].numb + "." + questions[index].question + "</span>";
 
-    let hold_options = ""; 
+    let hold_options = "";
     for (let i = 0; i < questions[index].options.length; i++) {
         hold_options += `<div class="option"><span>${questions[index].options[i]}</span></div>`;
     }
-    
-    option_list.innerHTML = hold_options; 
-    total_que.textContent = index + 1 +" of 5 questions";
+
+    option_list.innerHTML = hold_options;
+    total_que.textContent = index + 1 + " of 5 questions";
 
     const options = document.querySelectorAll(".option");
     options.forEach(option => {
@@ -64,24 +64,25 @@ function showQuestion(index) {
             checkAnswer(option);
         });
     });
-    
+
 }
 
-function startTimer (count) {
+function startTimer(count) {
     var counter = setInterval(countDown, 1000);
-        function countDown () {
-            if (count < 10) {
-                timer.textContent = "0" + count;
-            } else {timer.textContent = count;}
-            if (count == 0) {
-                clearInterval(counter); 
-                timer_left.innerHTML = "Time experied";
-            }
-            count--;
-        }      
+    function countDown() {
+        if (count < 10) {
+            timer.textContent = "0" + count;
+        } else { timer.textContent = count; }
+
+        if (count == 0) {
+            clearInterval(counter);
+            timer_left.innerHTML = "Time experied";
+        }
+        count--;
+    }
 }
 
-function checkAnswer (option) {
+function checkAnswer(option) {
     const userAnswer = option.querySelector("span").innerText;
     const correctAnswer = questions[counter].answer;
 
@@ -96,7 +97,7 @@ function checkAnswer (option) {
     options.forEach(option => {
         option.classList.add("disabled")
     });
-   next_btn.classList.add("show");
+    next_btn.classList.add("show");
 }
 
 function resetOptions() {
@@ -113,12 +114,12 @@ function showResult() {
     result_box.classList.add("activeResult");
 
     const scoreText = document.querySelector(".result_box .score_text");
-    scoreText.innerHTML =`<span> You scored ${userScore} questions of the ${questions.length} questions!</span>`;
+    scoreText.innerHTML = `<span> You scored ${userScore} questions of the ${questions.length} questions!</span>`;
 }
 
-restart_quiz.addEventListener('click', ()=>{
-    counter=0;
-    userScore=0;
+restart_quiz.addEventListener('click', () => {
+    counter = 0;
+    userScore = 0;
     result_box.classList.remove("activeResult");
     quiz_box.classList.add("activeQuiz");
     showQuestion(counter);
@@ -127,7 +128,8 @@ restart_quiz.addEventListener('click', ()=>{
 });
 
 quit_quiz.addEventListener('click', () => {
-    counter = 0; 
+    counter = 0;
+    userScore = 0;
     result_box.classList.remove("activeResult");
     info_box.classList.add("activeInfo");
 })
