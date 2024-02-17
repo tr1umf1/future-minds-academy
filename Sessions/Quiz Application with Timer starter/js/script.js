@@ -148,4 +148,5 @@ quit_quiz.addEventListener('click', () => {
     userScore = 0;
     result_box.classList.remove("activeResult");
     info_box.classList.add("activeInfo");
+    window.location.reload();
 });
