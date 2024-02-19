@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Fun Facts</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Discover Fun Birthday Facts</h1>
+    <div>
+      <label for="date">Select Your Birthday:</label>
+      <input type="date" id="date">
+      <button onclick="fetchAndDisplayFacts()">Get Facts</button>
+    </div>
+  </div>
+
+  <script>
+    async function fetchBirthdayFact(date) {
+      const formattedDate = formatDate(date);
+      const url = `https://numbersapi.p.rapidapi.com/${formattedDate}/date?fragment=true&json=true`;
+      const options = {
+        method: "GET",
+        headers: {"X-RapidAPI-Key": "e4d453d878msh71e8e2aa317c8dfp1bb741jsndcc2e0eb6623","X-RapidAPI-Host": "numbersapi.p.rapidapi.com",},
+      };
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        return result;
+      } catch (error) {
+        console.error(error);
+        throw new Error("Failed to fetch data. Please try again.");
+      }
+    }
+
+    async function fetchAndDisplayFacts() {
+      const bDayElement = document.getElementById("date");
+      const date = bDayElement.value;
+      const [year, month, day] = date.split("-");
+      const url = `https://numbersapi.p.rapidapi.com/${month}/${day}/date?fragment=true&json=true`;
+
+      try {
+        const results = await Promise.all(Array(3).fill(fetchBirthdayFact(url)));
+        results.forEach(result => {
+          const p = document.createElement("p");
+          p.textContent = result.text;
+          document.body.appendChild(p);
+        });
+      } catch (error) {
+        console.error(error);
+        alert("Failed to fetch data. Please check your internet connection and try again.");
+      }
+    }
+
+    function formatDate(date) {
+      const [year, month, day] = date.split("-");
+      return `${month}/${day}`;
+    }
+  </script>
+</body>
+</html>
