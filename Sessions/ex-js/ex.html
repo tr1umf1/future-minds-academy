@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+
+    <select name="" id="myOptions">
+        
+    </select>
+
+    <h4 id="youPicked">Nothing</h4>
+    <img id="houseImage" src="" alt="House Image">
+
+    <script>
+        
+        const myOptions = document.getElementById("myOptions");
+        const youPicked = document.getElementById("youPicked");
+        const houseImage = document.getElementById("houseImage");
+
+        let options = ["House1", "House2", "House3", "House4", "House5"];
+
+        options.forEach(element => {
+            const option = document.createElement("option");
+            option.value = element;
+            option.textContent = element;
+            myOptions.appendChild(option);
+        });
+
+        myOptions.addEventListener("change", function() {
+            const selectedOption = this.value;
+            youPicked.textContent = selectedOption;
+            houseImage.src = 'img/twtw' + selectedOption.toLowerCase() + '.png';
+        });
+
+    </script>
+</body>
+</html>

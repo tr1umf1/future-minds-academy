@@ -22,6 +22,6 @@ function createBubbles() {
 createBubbles();
 document.body.addEventListener("click", (event) => {
   if (event.target.tagName == "DIV") {
-    event.target.remove("bubble");
+    event.target.remove("bubble"); // I added this as an bonus point without knowing that it will be the same task for the Bubble game
   }
 });
