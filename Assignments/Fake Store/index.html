@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Unique Store</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .heading {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 2rem 0;
+        color: #1e88e5;
+      }
+
+      #cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        cursor: pointer;
+        width: calc(25% - 20px);
+        margin: 0 10px 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 1.5rem;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .images {
+        width: 80%;
+        margin-bottom: 1rem;
+      }
+
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .price {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="heading">Explore Our Collection</h1>
+    <div id="cards"></div>
+
+    <div id="popup" class="popup">
+      <span class="close-btn" onclick="closePopup()">X</span>
+      <h1 class="popup-title"></h1>
+      <img src="" alt="Popup Image" class="popup-image" />
+      <p class="popup-description"></p>
+      <p class="popup-category"></p>
+      <p class="popup-price"></p>
+    </div>
+
+    <script>
+      function openPopup(title, image, description, category, price) {
+        const popup = document.getElementById("popup");
+        popup.querySelector(".popup-title").textContent = title;
+        popup.querySelector(".popup-image").src = image;
+        popup.querySelector(".popup-description").textContent = description;
+        popup.querySelector(".popup-category").textContent = category;
+        popup.querySelector(".popup-price").textContent = `Price: $${price}`;
+
+        popup.style.display = "block";
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("popup");
+        popup.style.display = "none";
+      }
+
+      fetch("https://fakestoreapi.com/products")
+        .then((data) => data.json())
+        .then((completedata) => {
+          let data1 = "";
+
+          completedata.forEach((values) => {
+            data1 += `<div class="card" onclick="openPopup('${values.title}', '${values.image}', '${values.description}', '${values.category}', '${values.price}')">
+                        <img src="${values.image}" class="images" alt="${values.title}">
+                        <h1 class="title">${values.title}</h1>
+                        <p class="price">$${values.price}</p>
+                    </div>`;
+          });
+
+          document.getElementById("cards").innerHTML = data1;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
