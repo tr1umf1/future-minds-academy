@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.timeDisplay {
+    color: white;
+    font-size: 68px;
+    line-height: 1em;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: gray;
+    font: 10px;
+}
+
+.split {
+    text-align: center;
+}
+
+.total {
+    text-align: right;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.lap-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 150px;
+    overflow-y: auto;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.buttons button {
+    width: 7rem;
+    padding-block: .3rem;
+    border: none;
+    border-radius: 7px;
+    color: white;
+}
+
+.reset-btn {
+    background-color: rgb(122, 122, 122);
+    display: none;
+}
+
+.reset-btn:hover, .lap-btn:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.lap-btn {
+    background-color: rgb(73, 73, 73);
+}
+
+.pointer-none {
+    pointer-events: none;
+}
+
+.stop-btn {
+    background-color: rgba(172, 21, 21, 0.7);
+    display: none;
+}
+
+.stop-btn:hover {
+    background-color: rgb(203, 7, 7);
+    cursor: pointer;
+}
+
+.start-btn {
+    background-color: rgba(9, 104, 9, 0.7);
+}
+
+.start-btn:hover {
+    background-color: rgb(19, 108, 19);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
