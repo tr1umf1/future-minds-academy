@@ -1,34 +1,70 @@
-const movieGernes = document.querySelector(".movieGernes");
-const movielist = document.querySelector(".movielist")
+const movieGernes      = document.querySelector('.movieGernes');
+const movielist        = document.querySelector('.movielist');
+const movieDetailsPage = document.querySelector('.movie-details-page');
 
-loadGernes();
-loadMovies();
 
-function loadGernes() {
-    let buildGernes="";
-0
-    for(i=0; i<allMovies.length; i++){
-    buildGernes += '<option value="'+ i +'">'+ allMovies[i].gerne +'</option>';
+populateMovies(0);
+loadDetailPage(0, 2);
+
+/* Dropdown for Gernes */
+let buildGernes = '';
+for(var run=0; run<allMovies.length; run++){
+    buildGernes += `
+        <option value="${run}">${allMovies[run].gerne}</option>
+    `;
+}
+movieGernes.innerHTML = buildGernes;
+
+/* Populate Movie list based on Gernes */
+function populateMovies(g) {
+    let buildList = '';
+    let currentGerne = allMovies[g];
+
+    for (let run = 0; run < currentGerne.movies.length; run++) {
+        buildList += `
+            <li id="list" onclick="selectMovie(this, ${g}, ${run})"> <!-- Changed onclick function to selectMovie -->
+                <h4>${currentGerne.movies[run].title}</h4>
+                <img src="assets/img/${currentGerne.movies[run].thumb}" alt="${currentGerne.movies[run].title}">
+                <p class="description">${currentGerne.movies[run].desc}</p>
+                <div class="row movie-stats m0 p0">
+                    <div class="col m0 p0">Date: <span>${currentGerne.movies[run].date}</span> </div>
+                    <div class="col m0 p0">Length: <span>${currentGerne.movies[run].length}</span> </div>
+                </div>
+            </li>
+        `;
     }
-    movieGernes.innerHTML = buildGernes;
+    movielist.innerHTML = buildList;
+    loadDetailPage(g, 0);
 }
 
-function loadMovies(index) {
-    let buildLi ="";
-    let movieGerne = allMovies[index].movies;
-
-    for (let i = 0; i < movieGerne.length; i++) {
-        buildLi = '<li>';
-        buildLi += '<li class="selected-movie">';
-        buildLi += '<h4>' + movieGerne[i].title + '</h4>';
-        buildLi += '<img src="assets/img' + movieGerne[i].thumb + '" alt="' + movieGerne[i].title + '">';
-        buildLi += '<p class="description">' + movieGerne[i].desc + '</p>';
-        buildLi += '<div class="row movie-stats m0 p0">';
-        buildLi += '<div class="col m0 p0">Date: <span>' + movieGerne[i].date + '</span> </div>';
-        buildLi += '<div class="col m0 p0">Length: <span>' + movieGerne[i].length + '</span> </div>';
-        buildLi += '</div>';
-        buildLi += '</li>';
+function selectMovie(element, g, m) {
+    const selectedMovie = document.querySelector('.selected-movie');
+    if (selectedMovie) {
+        selectedMovie.classList.remove('selected-movie');
     }
-    movielist.innerHTML = buildLi;
-    movielist.childNodes[0].classList.add_("selected-movie");
+    element.classList.add('selected-movie');
+    loadDetailPage(g, m);
+}
+
+
+function loadDetailPage(g, m) {
+    let currentGerne = allMovies[g];
+
+    let listActors = "";
+    currentGerne.movies[m].actors.forEach((item, index) => {
+        listActors += item + ", ";
+    });
+
+    let buildDetailPage = `
+            <h1>${currentGerne.movies[m].title} (2023)</h1>
+            <h4>Date: ${currentGerne.movies[m].date} | Length: ${currentGerne.movies[m].length} min</h4>
+            <div class="container">
+                ${currentGerne.movies[m].trailer}
+            </div>
+
+            <h4 class="movieActors"> ${listActors}</h4>
+            <p>${currentGerne.movies[m].desc}</p>
+        `;
+
+    movieDetailsPage.innerHTML = buildDetailPage;
 }

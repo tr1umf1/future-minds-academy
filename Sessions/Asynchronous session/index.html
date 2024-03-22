@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input id="date" type="date">
+        <input type="submit" value="get cool facts">
+    </form>
+
+    <menu id="facts"></menu>
+
+
+
+
+    <script>
+        let input = document.getElementById("date");
+        let list = document.getElementById("facts");
+
+        const url = 'https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true';
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'aad92c8018mshd1104445480e2c5p1cf6b1jsn709988c9e192',
+                'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com'
+            }
+        };
+        fetch(url, options)
+        .then(res => res.json())
+        .then(data => console.log(data));
+
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            getFacts(new Date(input.value));
+        })
+
+        async function getFacts(date) {
+            let facts = await Promise.all([getFacts(date), getFacts(date), getFacts(date)]);
+
+            facts.forEach (fact => {
+                let li = document.createElement('li');
+                li.textContent = fact1;
+                list.appendChild(li);
+            })
+
+        }
+
+        async function getFact(date) {
+            const url = `https://numbersapi.p.rapidapi.com/${date.getMonth()}/${date.getDate()}/date?fragment=true&json=true`;
+
+            let res1 = await fetch(url, options);
+            let data1 = await res1.json();
+            let fact1 = data1.text;
+        }
+    </script>
+</body>
+</html>
