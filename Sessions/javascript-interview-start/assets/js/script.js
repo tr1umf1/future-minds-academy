@@ -1,4 +1,4 @@
-const movieGernes      = document.querySelector('.movieGernes');
+const movieGernes    = document.querySelector('.movieGernes');
 const movielist        = document.querySelector('.movielist');
 const movieDetailsPage = document.querySelector('.movie-details-page');
 
