@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import react from "react"
 
 export default function Nav(props) {
@@ -8,13 +9,13 @@ export default function Nav(props) {
                     <nav className="navbar gap-2">
                         <img src="assets/images/logo.svg" alt="Around-Logo" className="navbar-logo" />
                         <ul className="navbar-menu remove-tablet">
-                            <li><a href="index.html" className={props.active}>Home</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                            <li><a href="contact-us.html">Contact us</a></li>
+                            <li><a href="/" className={props.active}>Home</a></li>
+                            <li><a href="/about">About us</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/blog-details">Blog Details</a></li>
+                            <li><a href="/contact-us">Contact us</a></li>
                         </ul>
                         <div className="navbar-button remove-tablet">
                             <img src="assets/images/sun.png" alt="" />

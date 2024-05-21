@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 export default function Hero(props) {
     return (
         <div className="container-fixed container-res gap-4">
@@ -17,7 +18,7 @@ export default function Hero(props) {
                 </div>
             </div>
             <div className="col img-fixed">
-                <img src="assets/images/header-img.png" className="img-xxl" />
+                <img src={props.image} className="img-xxl"/>
             </div>
         </div>
     </div>
