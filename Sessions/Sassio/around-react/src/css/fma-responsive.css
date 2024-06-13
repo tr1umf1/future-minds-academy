@@ -18,7 +18,7 @@
     .row-tablet{
         flex-direction: column;
     }
-
+                    
     .grid-cl-1{
         grid-template-columns: 1fr;
     }

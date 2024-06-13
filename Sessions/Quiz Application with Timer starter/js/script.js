@@ -94,7 +94,7 @@ function checkAnswer(option) {
         userScore++;
     } else {
         option.classList.add("incorrect");
-        option.querySelector("i").classList.add("fa-times-circle"); // Add icon for incorrect answer
+        option.querySelector("i").classList.add("fa-times-circle"); 
 
         // Highlight the correct answer
         const options = document.querySelectorAll('.option');
