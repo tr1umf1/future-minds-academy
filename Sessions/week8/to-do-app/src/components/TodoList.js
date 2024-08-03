@@ -1,20 +1,21 @@
-/* eslint-disable array-callback-return */
-export default function ToDoList({ tasks, removeTask }) {
-    return (
+/* eslint-disable no-undef */
+import ToDoItem from "./ToDoItem"
+export default function ToDoList({tasks, removeTask, filterTasks}){
+    
+    return(
         <>
-            <ul>
-                {tasks.map((task, index) => {
-                    return (<li>
-                        {task}
-                        <button onClick={() => removeTask(index)}>Remove</button>
-                    </li>)
+        <div>
+            <button onClick={()=>filterTasks('viewAll')} >View All</button>
+            <button onClick={()=>filterTasks('yesterday')} >Yesterday</button>
+            <button onClick={()=>filterTasks('today')} >Today</button>
+            <button onClick={()=>filterTasks('tomorrow')}>Tomorrow</button>
+        </div>
 
-                }
-
-                )}
-            </ul>
+        <ul>
+            {tasks.map((task, index) => (
+            <ToDoItem key={index} task={task} index={index} removeTask={removeTask} />
+            ))}
+        </ul>
         </>
-
-    )
-
+    );
 }
